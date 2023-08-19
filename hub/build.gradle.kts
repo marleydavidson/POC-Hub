@@ -34,6 +34,8 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("com.google.code.gson:gson:2.8.8")  // Verifique se esta é a versão mais recente.
+
 }
 
 tasks.withType<KotlinCompile> {
