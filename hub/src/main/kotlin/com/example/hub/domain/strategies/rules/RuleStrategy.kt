@@ -1,11 +1,11 @@
 package com.example.hub.domain.strategies.rules
 
-import com.example.hub.domain.entities.enums.RuleType
 import com.example.hub.domain.rules.Rule
+import com.google.gson.JsonObject
 
 
 interface RuleStrategy {
-    val type: RuleType
-    fun createRuleFromMap(ruleMap: Map<String, Any>): Rule<*>
+    fun supports(ruleType: String): Boolean
+    fun createRule(json: JsonObject): Rule<*>
 
 }
