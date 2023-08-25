@@ -22,11 +22,13 @@ class ApiConsumerRule(
 
     override var nextRule: Rule<*>? = null
     override fun execute(request: JsonObject): JsonObject {
+        System.out.println("Executando a rule APi Consumer")
         nextRule?.execute(request)
         return request;
     }
 
     override fun linkNextRule(rule: Rule<*>) {
+        System.out.println(this.javaClass.name+ "nextRule ->"+rule.javaClass.name)
         this.nextRule = rule
     }
 }

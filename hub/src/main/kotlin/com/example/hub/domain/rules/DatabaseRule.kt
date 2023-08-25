@@ -15,10 +15,12 @@ class DatabaseRule(
         , override var nextRule: Rule<*>?
 ) : Rule<JsonObject> {
     override fun execute(request: JsonObject): JsonObject {
+        System.out.println("Executando a rule Database")
         nextRule?.execute(request)
         return request
     }
     override fun linkNextRule(rule: Rule<*>) {
+        System.out.println(this.javaClass.name+ "nextRule ->"+rule.javaClass.name)
         this.nextRule = rule
     }
 }

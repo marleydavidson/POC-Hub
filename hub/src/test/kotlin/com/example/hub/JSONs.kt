@@ -7,7 +7,7 @@ class JSONs {
         val API_CONSUMER_RULE_JSON = """
         {
             "rule": "API_CONSUMER",
-            "order": 2,
+            "order": 3,
             "url": "https://alguma.api.com.br/algum/path/{id}",
             "body" : "{ \"name\" : \"\teste\"}",
             "parameters": {
@@ -51,7 +51,7 @@ class JSONs {
         val VALUE_VALIDATION_RULE_JSON = """
         {
             "rule": "VALUE_VALIDATION",
-            "order": 3,
+            "order": 1,
             "operation": {
                 "field": ".request.body.valor_transacao",
                 "validation": {
@@ -68,7 +68,7 @@ class JSONs {
         val DATA_BASE_RULE_JSON = """
         {
             "rule": "DATA_BASE",
-            "order": 1,
+            "order": 2,
             "database_connection_id": 1234,
             "operation": "SELECT",
             "field": "name,address",
@@ -96,4 +96,5 @@ class JSONs {
        }         
     """.trimIndent()
     }
+
 }
